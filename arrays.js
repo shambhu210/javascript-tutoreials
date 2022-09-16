@@ -56,7 +56,7 @@ console.log(word.length)
 // here the compiler notes comma as a divider
 console.log(word.split(","))
 
-const name = "dibyo dey"
+const name = "dibyo dey Dey"
 // First Name: Dibyo
 // Last name: Dey
 
@@ -81,9 +81,79 @@ function capitalizeFirstLetter(string) {
 
   }
 
+// CAPITALIZE ALL LETTERS
+  
+function capitalizeLetters2(names) {
+  let fullnamess = names;
+
+  if(fullnamess !== ""){
+
+    const words = fullnamess.split(" ");
+
+    for (let i = 0; i < words.length; i++) {
+      words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+    }
+  
+    return words.join(" ");
+    
+  }
+
+}
+
+console.log(capitalizeLetters2(name))
+
 
 console.log("First Name:",capitalizeFirstLetter(fullname.fname))
 
+const someArray = ["apple", "banana", "grape", "pineapple", "fruits"]
+
+
+
+// SLICE             (start index, slice index)
+console.log(someArray.slice(1,3))
+
+// JOIN 
+let email =['9830202323',"09723863632"]
+console.log(email.join(", "))
+
+// CONCAT
+const arr4 = [1,2,3,4,5,6,7,8,9,10]
+const arr5 = [1,2,3,4,5,6,7,8,9,10]
+const arr6= [1,2,3,4,5,6,7,8,9,10]
+var a =arr4.concat(arr5,arr6)
+console.log(a)
+
+var hello2 = "23623626326232328323"
+var hello5 = "shdishdishdjdosjdsddf"
+console.log(hello2.concat(hello5))
+
+// SORT 
+let sorting = [2,45,64,2,4,6,7,89,2]
+function bubbleSort(array) {
+  var done = false;
+  while (!done) {
+    done = true;
+    for (var i = 1; i < array.length; i += 1) {
+      if (array[i - 1] > array[i]) {
+        done = false;
+        var tmp = array[i - 1];
+        array[i - 1] = array[i];
+        array[i] = tmp;
+      }
+    }
+  }
+
+  return array;
+}
+
+var numbers = [12, 10, 15, 11, 14, 13, 16];
+bubbleSort(sorting);
+console.log("MANUAL:",sorting);
+console.log("IBUILT:",sorting.sort())
+
+// Reverse
+var soreversearray = [1,2,3,4,5,6,7,8,9]
+console.log(soreversearray.reverse())
 
 
 

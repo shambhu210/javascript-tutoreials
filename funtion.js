@@ -164,3 +164,16 @@ const texts = document.getElementById("texts")
   }
 });
 
+var pic = document.getElementById("pic")
+let count = 0
+var images= ["aa.png","dd.jpg"]
+
+
+// Dynamic
+
+
+if(count<10){
+  count++
+  pic.src=images[count]
+}
+
